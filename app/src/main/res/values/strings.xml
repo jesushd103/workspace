@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">EassyTravel</string>
+    <string name="action_settings">Settings</string>
+    <string name="car">Settings</string>
+    <string name="inBrowser">InBrowser</string>
+    <string name="goBack">backr</string>
+    <string name="goForward">forward</string>
+    <string name="goHome">home</string>
+    <string name="uberB">UberButtom</string>
+    <string name="cars">CarsAvaliables</string>
+    <string name="ButtomFollowing">Following</string>
+    <string name="ButtomPrevious">Previous</string>
+    <string name="flight">Settings</string>
+    <string name="rattings">Settings</string>
+    <string name="apartment">Settings</string>
+    <string name="fondo">Settings</string>
+    <string name="login">Login</string>
+    <string name="title_activity_list_cars">ListCars</string>
+    <string name="search">search</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_uber">UberActivity</string>
+    <string name="google_Maps_API_key">AIzaSyCP5ChkRRkpDbfevOpBcKSpPQufr9h2wGc</string>
+    <string name="select_location">select location:\n</string>
+
+
+</resources>

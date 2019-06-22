@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoogleLogin"
+    android:background="@color/colorPrimary">
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="391dp"
+        android:layout_height="131dp"
+        android:layout_above="@+id/sign_in_button"
+        android:layout_alignEnd="@+id/sign_in_button"
+        android:layout_alignRight="@+id/sign_in_button"
+        android:layout_marginEnd="-221dp"
+        android:layout_marginRight="-221dp"
+        android:layout_marginBottom="-340dp"
+        android:text="Or come back!"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="30sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="391dp"
+        android:layout_height="131dp"
+        android:layout_above="@+id/sign_in_button"
+        android:layout_alignEnd="@+id/sign_in_button"
+        android:layout_alignRight="@+id/sign_in_button"
+        android:layout_marginEnd="-148dp"
+        android:layout_marginRight="-148dp"
+        android:layout_marginBottom="-37dp"
+        android:text="Press the button to log in in to your Google Account!"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="30sp"
+        android:typeface="sans" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="135dp"
+        android:layout_height="76dp"
+        android:layout_alignEnd="@+id/sign_in_button"
+        android:layout_alignRight="@+id/sign_in_button"
+        android:layout_alignBottom="@+id/sign_in_button"
+        android:layout_marginEnd="-3dp"
+        android:layout_marginRight="-3dp"
+        android:layout_marginBottom="-265dp"
+        android:onClick="comeBack"
+        app:srcCompat="@drawable/quantum_ic_arrow_back_grey600_24" />
+
+</RelativeLayout>
