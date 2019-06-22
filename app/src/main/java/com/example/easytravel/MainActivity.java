@@ -92,5 +92,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(resta);
 
     }
+    public void goToFly(View view){
+        Intent fly = new Intent(this, AirportActivity.class);
+        startActivity(fly);
 
+    }
 }

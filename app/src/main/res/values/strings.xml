@@ -21,6 +21,19 @@
     <string name="title_activity_uber">UberActivity</string>
     <string name="google_Maps_API_key">AIzaSyCP5ChkRRkpDbfevOpBcKSpPQufr9h2wGc</string>
     <string name="select_location">select location:\n</string>
+    <string name="flights">Flights</string>
+    <string name="tickets">Tickets</string>
+    <string name="about">About...</string>
+    <string name="simulator">Simulator</string>
+    <string name="nav_header">Airport App v.1.0</string>
+    <string name="airport_app_author">Arthur V. Ratz @ CodeProject.Com </string>
+    <string name="arrivals_tab">Arrivals</string>
+    <string name="departures_tab">Departures</string>
+    <string name="flights_prev">YESTERDAY</string>
+    <string name="flights_now">TODAY</string>
+    <string name="flights_next">TOMORROW</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
