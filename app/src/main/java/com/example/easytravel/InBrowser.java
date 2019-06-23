@@ -28,7 +28,6 @@ public class InBrowser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_browser);
-
         editText = (EditText) findViewById(R.id.editText);
 
         button = (Button) findViewById(R.id.button);

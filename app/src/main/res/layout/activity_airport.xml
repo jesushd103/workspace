@@ -5,6 +5,7 @@
     android:id="@+id/airport_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C9FFF6"
     android:fitsSystemWindows="true">
 
     <include layout="@layout/content_frame"

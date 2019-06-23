@@ -16,7 +16,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppThemeToolBar">
+        <activity android:name=".Alarm"></activity>
         <activity android:name=".Map2Activity" />
         <activity android:name=".PermissionActivity" />
         <activity android:name=".WeatherActivity" />
@@ -24,18 +25,18 @@
         <activity android:name=".GoogleGoodLogin" />
         <activity android:name=".GoogleLogin" />
         <activity android:name=".GoogleServices" />
-        <activity android:name=".AirportActivity"
-
+        <activity
+            android:name=".AirportActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:theme="@style/AppTheme.NoActionBar"
-
-            android:windowSoftInputMode="stateHidden"
-
-            android:configChanges="orientation|screenSize|keyboard|keyboardHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".activity.SplashActivity"></activity>
+        <activity android:name=".activity.MainActivity2"></activity>
+        <activity android:name=".activity.SearchBusinessesActivity" />
+        <activity android:name=".activity.BusinessDetailsActivity" />
+        <activity android:name=".activity.AllCategoriesActivity" />
+        <activity android:name=".activity.EventLookupActivity" />
+        <activity android:name=".activity.CategoryDetailsActivity" />
         <activity
             android:name=".InBrowser"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
@@ -45,7 +46,9 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity android:name=".TaskHome">
+        </activity>
+        <activity android:name=".AddTask"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCP5ChkRRkpDbfevOpBcKSpPQufr9h2wGc" />
@@ -70,6 +73,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".AlertReceiver" />
     </application>
 
 </manifest>

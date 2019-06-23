@@ -65,7 +65,7 @@
         android:layout_marginStart="68dp"
         android:layout_marginTop="56dp"
         android:contentDescription="@string/ButtomFollowing"
-        android:onClick="Following"
+        android:onClick="goToYelp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rattings"
         app:srcCompat="@android:drawable/ic_search_category_default" />
@@ -99,14 +99,33 @@
         android:id="@+id/imageButton2"
         android:layout_width="88dp"
         android:layout_height="98dp"
-        android:layout_marginStart="104dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="68dp"
         android:onClick="goToWeather"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Login"
         app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:srcCompat="@android:drawable/ic_menu_mapmode" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="86dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="52dp"
+        android:onClick="goToTask"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:srcCompat="@mipmap/ic_tasks" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="91dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="68dp"
+        android:onClick="goToAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:srcCompat="@mipmap/ic_alarm" />
 
 </android.support.constraint.ConstraintLayout>

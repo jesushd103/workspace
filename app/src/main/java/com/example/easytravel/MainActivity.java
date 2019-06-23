@@ -6,10 +6,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
+import com.example.easytravel.activity.SplashActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -95,6 +97,21 @@ public class MainActivity extends AppCompatActivity {
     public void goToFly(View view){
         Intent fly = new Intent(this, AirportActivity.class);
         startActivity(fly);
+
+    }
+    public void goToYelp(View view){
+        Intent yelp = new Intent(this, SplashActivity.class);
+        startActivity(yelp);
+
+    }
+    public void goToAlarm(View view){
+        Intent alarm = new Intent(this, Alarm.class);
+        startActivity(alarm);
+
+    }
+    public void goToTask(View view){
+        Intent task = new Intent(this, TaskHome.class);
+        startActivity(task);
 
     }
 }

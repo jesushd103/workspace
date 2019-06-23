@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EassyTravel</string>
+    <string name="app_name">EasyTravel</string>
     <string name="action_settings">Settings</string>
     <string name="car">Settings</string>
     <string name="inBrowser">InBrowser</string>
@@ -36,4 +36,54 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="button_search_businesses">Search Businesses</string>
+    <string name="button_all_categories">All Categories</string>
+    <string name="button_event">Event lookup</string>
+    <string name="button_search_">Search Businesses</string>
+    <string name="business_endpoint">Business Endpoint</string>
+    <string name="category_endpoint">Category Endpoint</string>
+    <string name="event_endpoint">Event Endpoint</string>
+    <string name="button_exit">Exit</string>
+    <string name="text_term">Term: </string>
+    <string name="text_location">Location: </string>
+    <string name="text_price">Price: </string>
+    <string name="map_notification">Please make sure Google Services is beyond v13.4!</string>
+    <string name="search_hint">Click button to search.</string>
+    <string name="business_name">Name: </string>
+    <string name="business_rating">Rating: </string>
+    <string name="business_price">Price: </string>
+    <string name="business_review_count">Review count: </string>
+    <string name="business_location">Location: </string>
+    <string name="business_phone">Phone: </string>
+    <string name="yelp_key">MRFYWpOLGwR-kiDILtqbDiXnRHZ-NVUlTArt0Ul0UQQsRvZqXx0oNRojs1xa96JN7QI5rJtmeDemfk9dTfHjqx2-vutsQRGbpKrb1QwpB6WO6EiItKYRQ5un7YwOXXYx</string>
+
+    <string-array name="terms">
+        <item>Restaurants</item>
+        <item>Museums</item>
+        <item>Parks</item>
+        <item>Bars</item>
+        <item>Clubs</item>
+        <item>Gyms</item>
+        <item>Hair Salons</item>
+        <item>Massage</item>
+        <item>Dry cleaning</item>
+        <item>Hospitals</item>
+    </string-array>
+
+    <string-array name="locations">
+        <item>Linz</item>
+        <item>Vienna</item>
+        <item>Graz</item>
+        <item>Innsbruck</item>
+        <item>Lienz</item>
+        <item>Salzburg</item>
+        <item>Klagenfurt</item>
+    </string-array>
+    <string-array name="prices">
+        <item>$</item>
+        <item>$$</item>
+        <item>$$$</item>
+        <item>$$$$</item>
+    </string-array>
 </resources>
