@@ -1,6 +1,7 @@
 package com.example.easytravel;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.easytravel.activity.SplashActivity;
+import com.example.easytravel.budget.MainActivity3;
+import com.example.easytravel.budget.intro.IntroActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -51,7 +54,16 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.login) {
             return true;
         }
-
+        if(id == R.id.action_intro)
+        {
+            startIntro();
+            return true;
+        }
+        SharedPreferences prefs = getSharedPreferences("protect.budgetwatch", MODE_PRIVATE);
+        if (prefs.getBoolean("firstrun", true)) {
+            startIntro();
+            prefs.edit().putBoolean("firstrun", false).commit();
+        }
         return super.onOptionsItemSelected(item);
     }
     public void MensajeCar(View view){
@@ -114,4 +126,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(task);
 
     }
+    public void goToBudget(View view){
+        Intent budget = new Intent(this, MainActivity3.class);
+        startActivity(budget);
+
+    }
+    private void startIntro()
+    {
+        Intent intent = new Intent(this, IntroActivity.class);
+        startActivity(intent);
+    }
+
+
 }

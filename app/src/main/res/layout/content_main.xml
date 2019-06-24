@@ -15,11 +15,11 @@
         android:layout_width="96dp"
         android:layout_height="100dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
         android:contentDescription="@string/car"
         android:onClick="Following2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rattings"
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <ImageButton
@@ -27,23 +27,23 @@
         android:layout_width="95dp"
         android:layout_height="100dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:contentDescription="@string/rattings"
         android:onClick="goToRestaurant"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/car"
-        app:srcCompat="@android:drawable/star_big_on" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton6"
+        app:srcCompat="@mipmap/ic_mapita2" />
 
     <ImageButton
         android:id="@+id/flight"
         android:layout_width="94dp"
         android:layout_height="99dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="72dp"
         android:contentDescription="@string/flight"
         android:onClick="goToFly"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
         app:srcCompat="@mipmap/ic_launcher_foreground2" />
 
     <ImageButton
@@ -51,11 +51,11 @@
         android:layout_width="92dp"
         android:layout_height="99dp"
         android:layout_marginTop="52dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="72dp"
         android:contentDescription="@string/apartment"
         android:onClick="goToInBrowser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flight"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"
         app:srcCompat="@mipmap/ic_launcher_foreground3" />
 
     <ImageButton
@@ -63,11 +63,11 @@
         android:layout_width="91dp"
         android:layout_height="94dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="64dp"
         android:contentDescription="@string/ButtomFollowing"
         android:onClick="goToYelp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rattings"
+        app:layout_constraintTop_toBottomOf="@+id/Login"
         app:srcCompat="@android:drawable/ic_search_category_default" />
 
     <ImageButton
@@ -75,46 +75,46 @@
         android:layout_width="91dp"
         android:layout_height="99dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="@string/login"
         android:onClick="goToLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMap"
+        app:layout_constraintTop_toBottomOf="@+id/car"
         app:srcCompat="@drawable/ic_person_black_24dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="89dp"
         android:layout_height="100dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="60dp"
-        android:onClick="goToCamera"
-        app:layout_constraintStart_toEndOf="@+id/btnMap"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="76dp"
+        android:onClick="goToBudget"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_budget" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="88dp"
         android:layout_height="98dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="76dp"
         android:onClick="goToWeather"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
-        app:srcCompat="@android:drawable/ic_menu_mapmode" />
+        app:layout_constraintTop_toBottomOf="@+id/flight"
+        app:srcCompat="@mipmap/ic_weather" />
 
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="86dp"
         android:layout_height="95dp"
         android:layout_marginStart="68dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="56dp"
         android:onClick="goToTask"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Login"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_tasks" />
 
     <ImageButton
