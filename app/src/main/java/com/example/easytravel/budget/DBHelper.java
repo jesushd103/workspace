@@ -41,7 +41,6 @@ class DBHelper extends SQLiteOpenHelper
         public static final String NAME = "_id";
         public static final String TYPE = "type";
         public static final String DESCRIPTION = "description";
-        public static final String ACCOUNT = "account";
         public static final String BUDGET = "budget";
         public static final String VALUE = "value";
         public static final String NOTE = "note";
@@ -81,7 +80,6 @@ class DBHelper extends SQLiteOpenHelper
                 TransactionDbIds.NAME + " INTEGER primary key autoincrement," +
                 TransactionDbIds.TYPE + " INTEGER not null," +
                 TransactionDbIds.DESCRIPTION + " TEXT not null," +
-                TransactionDbIds.ACCOUNT + " TEXT," +
                 TransactionDbIds.BUDGET + " TEXT," +
                 TransactionDbIds.VALUE + " REAL not null," +
                 TransactionDbIds.NOTE + " TEXT," +
@@ -422,13 +420,12 @@ class DBHelper extends SQLiteOpenHelper
      * @return true if the insertion was successful,
      * false otherwise
      */
-    public boolean insertTransaction(final int type, final String description, final String account, final String budget,
+    public boolean insertTransaction(final int type, final String description, final String budget,
                                  final double value, final String note, final long dateInMs, final String receipt)
     {
         ContentValues contentValues = new ContentValues();
         contentValues.put(TransactionDbIds.TYPE, type);
         contentValues.put(TransactionDbIds.DESCRIPTION, description);
-        contentValues.put(TransactionDbIds.ACCOUNT, account);
         contentValues.put(TransactionDbIds.BUDGET, budget);
         contentValues.put(TransactionDbIds.VALUE, value);
         contentValues.put(TransactionDbIds.NOTE, note);
@@ -457,14 +454,13 @@ class DBHelper extends SQLiteOpenHelper
      * @return true if the insertion was successful,
      * false otherwise
      */
-    public boolean insertTransaction(SQLiteDatabase writableDb, final int id, final int type, final String description, final String account, final String budget,
+    public boolean insertTransaction(SQLiteDatabase writableDb, final int id, final int type, final String description, final String budget,
                                      final double value, final String note, final long dateInMs, final String receipt)
     {
         ContentValues contentValues = new ContentValues();
         contentValues.put(TransactionDbIds.NAME, id);
         contentValues.put(TransactionDbIds.TYPE, type);
         contentValues.put(TransactionDbIds.DESCRIPTION, description);
-        contentValues.put(TransactionDbIds.ACCOUNT, account);
         contentValues.put(TransactionDbIds.BUDGET, budget);
         contentValues.put(TransactionDbIds.VALUE, value);
         contentValues.put(TransactionDbIds.NOTE, note);
@@ -492,13 +488,12 @@ class DBHelper extends SQLiteOpenHelper
      * was successfully updated, false otherwise.
      */
     public boolean updateTransaction(final int id, final int type, final String description,
-                                     final String account, final String budget, final double value,
+                                     final String budget, final double value,
                                      final String note, final long dateInMs, final String receipt)
     {
         ContentValues contentValues = new ContentValues();
         contentValues.put(TransactionDbIds.TYPE, type);
         contentValues.put(TransactionDbIds.DESCRIPTION, description);
-        contentValues.put(TransactionDbIds.ACCOUNT, account);
         contentValues.put(TransactionDbIds.BUDGET, budget);
         contentValues.put(TransactionDbIds.VALUE, value);
         contentValues.put(TransactionDbIds.NOTE, note);
@@ -633,7 +628,7 @@ class DBHelper extends SQLiteOpenHelper
         {
             query += " AND ( ";
 
-            String [] items = new String[]{TransactionDbIds.DESCRIPTION, TransactionDbIds.ACCOUNT,
+            String [] items = new String[]{TransactionDbIds.DESCRIPTION,
                     TransactionDbIds.VALUE, TransactionDbIds.NOTE};
 
             for(int index = 0; index < items.length; index++)

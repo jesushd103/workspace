@@ -68,8 +68,6 @@ public class TransactionViewActivity extends AppCompatActivity
 
     private EditText _nameEdit;
     private TextView _nameView;
-    private EditText _accountEdit;
-    private TextView _accountView;
     private EditText _valueEdit;
     private TextView _valueView;
     private EditText _noteEdit;
@@ -147,8 +145,6 @@ public class TransactionViewActivity extends AppCompatActivity
 
         _nameEdit = (EditText) findViewById(R.id.nameEdit);
         _nameView = (TextView) findViewById(R.id.nameView);
-        _accountEdit = (EditText) findViewById(R.id.accountEdit);
-        _accountView = (TextView) findViewById(R.id.accountView);
         _valueEdit = (EditText) findViewById(R.id.valueEdit);
         _valueView = (TextView) findViewById(R.id.valueView);
         _noteEdit = (EditText) findViewById(R.id.noteEdit);
@@ -264,7 +260,7 @@ public class TransactionViewActivity extends AppCompatActivity
         {
             Transaction transaction = _db.getTransaction(_transactionId);
             (_updateTransaction ? _nameEdit : _nameView).setText(transaction.description);
-            (_updateTransaction ? _accountEdit : _accountView).setText(transaction.account);
+
 
             int budgetIndex = budgetNames.indexOf(transaction.budget);
             if(budgetIndex >= 0)
@@ -282,7 +278,6 @@ public class TransactionViewActivity extends AppCompatActivity
             {
                 _budgetSpinner.setVisibility(View.GONE);
                 _nameEdit.setVisibility(View.GONE);
-                _accountEdit.setVisibility(View.GONE);
                 _valueEdit.setVisibility(View.GONE);
                 _noteEdit.setVisibility(View.GONE);
                 _dateEdit.setVisibility(View.GONE);
@@ -310,7 +305,6 @@ public class TransactionViewActivity extends AppCompatActivity
             {
                 _budgetView.setVisibility(View.GONE);
                 _nameView.setVisibility(View.GONE);
-                _accountView.setVisibility(View.GONE);
                 _valueView.setVisibility(View.GONE);
                 _noteView.setVisibility(View.GONE);
                 _dateView.setVisibility(View.GONE);
@@ -335,7 +329,6 @@ public class TransactionViewActivity extends AppCompatActivity
         {
             _budgetView.setVisibility(View.GONE);
             _nameView.setVisibility(View.GONE);
-            _accountView.setVisibility(View.GONE);
             _valueView.setVisibility(View.GONE);
             _noteView.setVisibility(View.GONE);
             _dateView.setVisibility(View.GONE);
@@ -413,8 +406,6 @@ public class TransactionViewActivity extends AppCompatActivity
             return;
         }
 
-        final String account = _accountEdit.getText().toString();
-        // The account field is optional, so it is OK if it is empty
 
         final String valueStr = _valueEdit.getText().toString();
         if (valueStr.isEmpty())
@@ -467,13 +458,13 @@ public class TransactionViewActivity extends AppCompatActivity
 
         if(_updateTransaction)
         {
-            _db.updateTransaction(_transactionId, _type, name, account,
+            _db.updateTransaction(_transactionId, _type, name,
                     budget, value, note, dateMs, receipt);
 
         }
         else
         {
-            _db.insertTransaction(_type, name, account, budget,
+            _db.insertTransaction(_type, name, budget,
                     value, note, dateMs, receipt);
         }
 
